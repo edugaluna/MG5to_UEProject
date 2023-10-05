@@ -25,6 +25,8 @@ class AMG5_EGLProjectile : public AActor
 	UPROPERTY(EditDefaultsOnly, Category="FX")
 	UParticleSystem* ExplotionEffect;
 
+
+
 public:
 	AMG5_EGLProjectile();
 
@@ -36,5 +38,9 @@ public:
 	USphereComponent* GetCollisionComp() const { return CollisionComp; }
 	/** Returns ProjectileMovement subobject **/
 	UProjectileMovementComponent* GetProjectileMovement() const { return ProjectileMovement; }
+
+	/** Sound effect when a ball touch a collision */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FX)
+	USoundBase* FireSound;
 };
 

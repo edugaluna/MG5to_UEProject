@@ -42,4 +42,7 @@ void AMG5_EGLProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 		Destroy();
 	}
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplotionEffect, GetActorLocation());
+
+	UGameplayStatics::PlaySoundAtLocation(GetWorld(), FireSound, GetActorLocation());
+
 }
